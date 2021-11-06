@@ -5,18 +5,18 @@ console.log('Wylosowana liczba to: ' + randomNumber);
 
 let computerMove = getMoveName(randomNumber);
 
-function getMoveName(argComputerMove){
-    if( argComputerMove == 1){
+function getMoveName( computerMove){
+    if( computerMove == 1){
       return 'kamień';
     }
-    else if( argComputerMove == 2){
+    else if( computerMove == 2){
         return 'papier';
     }
-    else if( argComputerMove == 3){
+    else if( computerMove == 3){
         return 'nozyczki';
     }   
   
-    printMessage('Nie znam ruchu o id ' + argComputerMove + '.');
+    printMessage('Nie znam ruchu o id ' + computerMove + '.');
     return '1, 2, 3.';
   }
 
@@ -39,19 +39,20 @@ console.log('Gracz wpisał: ' + playerInput);
 
 let playerMove = getMoveName(playerInput);
 
-function getMoveName(agrPlayerMove){
-    if( agrPlayerMove == 1){
+function getMoveName( playerMove){
+    if( playerMove == 1){
       return 'kamień'
     }
-    else if( agrPlayerMove == 2){
+    else if( playerMove == 2){
         return 'papier';
     }
-    else if( agrPlayerMove == 3){
+    else if( playerMove == 3){
         return 'nozyczki';
     }   
   
-    printMessage('Nie znam ruchu o id ' + agrPlayerMove+ '.');
+    printMessage('Nie znam ruchu o id ' + playerMove + '.');
     return '1, 2, 3.';
+    
   }
 
 
@@ -64,44 +65,43 @@ function getMoveName(agrPlayerMove){
 // else if(playerInput == '3'){
 //     playerMove = 'nozyczki';
 // }
-
 printMessage('Twój ruch to: ' + playerMove);
+
 
 // RESULT
 
+function displayResult(argComputerMove, argPlayerMove){
 
-function displayResult( agrComputerMove, agrPlayerMove){
-
-if( agrComputerMove == 'kamień' && agrPlayerMove == 'papier'){
+if( argComputerMove == 'kamień' && argPlayerMove == 'papier'){
     printMessage('Ty wygrał!');
 }
-else if( agrComputerMove == 'kamień' && agrPlayerMove == 'nozyczki'){
-    printMessage('Ty przegrał');
+else if( argComputerMove == 'kamień' && argPlayerMove == 'nozyczki'){
+    printMessage('Ty przegrał!');
 }
-else if( agrComputerMove == 'kamień' && agrPlayerMove == 'kamień'){
-    printMessage('Remis');
+else if( argComputerMove =='kamień' && argPlayerMove == 'kamień'){
+    printMessage('Remis!');
 }
-else if( agrComputerMove == 'nozyczki' && agrPlayerMove == 'kamień'){
-    printMessage('Ty wygrał');
+else if( argComputerMove == 'nozyczki' && argPlayerMove == 'kamień'){
+    printMessage('Ty wygrał!');
 }
-else if( agrComputerMove == 'nozyczki' && agrPlayerMove == 'papier'){
-    printMessage('Ty przegrał');
+else if( argComputerMove == 'nozyczki' && argPlayerMove == 'papier'){
+    printMessage('Ty przegrał!');
 }
-else if( agrComputerMove == 'nozyczki' && agrPlayerMove == 'nozyczki'){
-    printMessage('Remis');
+else if( argComputerMove == 'nozyczki' && argPlayerMove == 'nozyczki'){
+    printMessage('Remis!');
 }
-else if( agrComputerMove == 'papier' && agrPlayerMove == 'nozyczki'){
-    printMessage('Ty wygrał');
+else if( argComputerMove == 'papier' && argPlayerMove == 'nozyczki'){
+    printMessage('Ty wygrał!');
 }
-else if( agrComputerMove == 'papier' && agrPlayerMove == 'kamień'){
-    printMessage('Ty przegrał')
+else if( argComputerMove == 'papier' && argPlayerMove == 'kamień'){
+    printMessage('Ty przegrał!')
 }
-else if( agrComputerMove == 'papier' && agrPlayerMove == 'papier'){
-    printMessage('Remis');
+else if( argComputerMove == 'papier' && argPlayerMove == 'papier'){
+    printMessage('Remis!');
 }
-console.log('Nieobsluzone: ' + argComputerMove + ' ' + argPlayerMove);
-
+else(console.log('Nieobsluzone: ' + argComputerMove + ' ' + argPlayerMove));
 }
+displayResult( computerMove, playerMove);
 
 
 
@@ -135,5 +135,4 @@ console.log('Nieobsluzone: ' + argComputerMove + ' ' + argPlayerMove);
 // else if( computerMove == 'papier' && playerMove == 'papier'){
 //     printMessage('Remis');
 // }
-
 
