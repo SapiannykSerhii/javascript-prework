@@ -10,34 +10,26 @@ function playGame(playerInput){
 
     let computerMove = getMoveName(randomNumber);
 
-    function getMoveName( computerMove){
-        if( computerMove == 1){
-        return 'kamień';
-        }
-        else if( computerMove == 2){
-            return 'papier';
-        }
-        else if( computerMove == 3){
-            return 'nozyczki';
-        }   
+    // function getMoveName( computerMove){
+    //     if( computerMove == 1){
+    //     return 'kamień';
+    //     }
+    //     else if( computerMove == 2){
+    //         return 'papier';
+    //     }
+    //     else if( computerMove == 3){
+    //         return 'nozyczki';
+    //     }   
     
-        printMessage('Nie znam ruchu o id ' + computerMove + '.');
-        return '1, 2, 3.';
-    }
+        // printMessage('Nie znam ruchu o id ' + computerMove + '.');
+        // return 'nieznany ruch';
+    // }
     printMessage('Mój ruch to: ' + computerMove);
 
-    // if(randomNumber == 1){
-    //   computerMove = 'kamień';
-    // }
-    // else if(randomNumber == 2){
-    //     computerMove = `papier`;
-    // }
-    // else if(randomNumber == 3){
-    //     computerMove = `nozyczki`;
-    // }
+  
 
 // PLAYER
-    // let playerInput = prompt('Wybierz swój ruch! 1: kamień, 2: papier, 3: nożyce.');
+    
     console.log('Gracz wpisał: ' + playerInput);
 
     let playerMove = getMoveName(playerInput);
@@ -54,20 +46,12 @@ function playGame(playerInput){
         }   
     
         printMessage('Nie znam ruchu o id ' + playerMove + '.');
-        return '1, 2, 3.';
+        return 'nieznany ruch';
         
     }
     printMessage('Twój ruch to: ' + playerMove);
 
-    // if(playerInput == '1'){
-    //   playerMove = 'kamień';
-    // }
-    // else if(playerInput == '2'){
-    //     playerMove = 'papier';
-    // }
-    // else if(playerInput == '3'){
-    //     playerMove = 'nozyczki';
-    // }
+
    
 // RESULT
     function displayResult(argComputerMove, argPlayerMove){
@@ -112,4 +96,3 @@ document.getElementById('play-paper').addEventListener('click', function(playerI
 document.getElementById('play-scissors').addEventListener('click', function(playerInput){
     playGame(3);
 });
- 
