@@ -10,21 +10,7 @@ function playGame(playerInput){
 
     let computerMove = getMoveName(randomNumber);
 
-    // function getMoveName( computerMove){
-    //     if( computerMove == 1){
-    //     return 'kamień';
-    //     }
-    //     else if( computerMove == 2){
-    //         return 'papier';
-    //     }
-    //     else if( computerMove == 3){
-    //         return 'nozyczki';
-    //     }   
-    
-        // printMessage('Nie znam ruchu o id ' + computerMove + '.');
-        // return 'nieznany ruch';
-    // }
-    printMessage('Mój ruch to: ' + computerMove);
+printMessage('Mój ruch to: ' + computerMove);
 
   
 
