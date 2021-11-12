@@ -1,5 +1,5 @@
 // PLAY GAME
-
+{
 function playGame(playerInput){
         clearMessages();
     
@@ -15,12 +15,12 @@ printMessage('Mój ruch to: ' + computerMove);
   
 
 // PLAYER
-    
+   
+   
     console.log('Gracz wpisał: ' + playerInput);
-
-    const playerMove = getMoveName(playerInput);
-
-    function getMoveName( playerMove){
+     const playerMove = getMoveName(playerInput);
+   
+     function getMoveName( playerMove){
         if( playerMove == 1){
         return 'kamień'
         }
@@ -82,3 +82,4 @@ document.getElementById('play-paper').addEventListener('click', function(playerI
 document.getElementById('play-scissors').addEventListener('click', function(playerInput){
     playGame(3);
 });
+}
